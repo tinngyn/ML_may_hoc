@@ -1,0 +1,193 @@
+[{
+  "_id": {
+    "$oid": "6924a2faa98f69c480924ba6"
+  },
+  "name": "Phở Bò Đặc Biệt",
+  "price": 65000,
+  "description": "Nước dùng hầm 10 tiếng, thịt bò thái mỏng, gân và nạm.",
+  "id_category": "65b509f6e5e032d1d0f507b1",
+  "averageRating": 4.5,
+  "dateCreated": {
+    "$date": "2025-11-24T19:57:26.148Z"
+  },
+  "ratingCount": 4
+},
+{
+  "_id": {
+    "$oid": "6924a2faa98f69c480924ba7"
+  },
+  "name": "Bún Chả Hà Nội",
+  "price": 55000,
+  "description": "Thịt lợn nướng than hoa thơm lừng, nước chấm chua ngọt.",
+  "id_category": "65b509f6e5e032d1d0f507b1"
+},
+{
+  "_id": {
+    "$oid": "6924a2faa98f69c480924ba8"
+  },
+  "name": "Cơm Tấm Sườn Bì Chả",
+  "price": 60000,
+  "description": "Sườn nướng mật ong, bì, chả trứng, cơm tấm tơi xốp.",
+  "id_category": "65b509f6e5e032d1d0f507b1"
+},
+{
+  "_id": {
+    "$oid": "6924a2faa98f69c480924ba9"
+  },
+  "name": "Bánh Mì Thập Cẩm",
+  "price": 30000,
+  "description": "Thịt nguội, pate, chả lụa, dưa chuột và rau thơm.",
+  "id_category": "65b509f6e5e032d1d0f507b1"
+},
+{
+  "_id": {
+    "$oid": "6924a2faa98f69c480924baa"
+  },
+  "name": "Nem Cuốn Tôm Thịt",
+  "price": 45000,
+  "description": "Gỏi cuốn tươi mát, chấm nước mắm đậu phộng.",
+  "id_category": "65b509f6e5e032d1d0f507b2"
+},
+{
+  "_id": {
+    "$oid": "6924a2faa98f69c480924bab"
+  },
+  "name": "Khoai Tây Chiên Phô Mai",
+  "price": 35000,
+  "description": "Khoai tây chiên giòn rụm phủ sốt phô mai béo ngậy.",
+  "id_category": "65b509f6e5e032d1d0f507b2"
+},
+{
+  "_id": {
+    "$oid": "6924a2faa98f69c480924bac"
+  },
+  "name": "Chả Giò Hải Sản",
+  "price": 50000,
+  "description": "Chả giò nhân tôm, cua, thịt heo, chiên vàng giòn.",
+  "id_category": "65b509f6e5e032d1d0f507b2"
+},
+{
+  "_id": {
+    "$oid": "6924a2faa98f69c480924bad"
+  },
+  "name": "Trà Đào Cam Sả",
+  "price": 40000,
+  "description": "Trà tươi, vị đào, cam và sả thanh mát.",
+  "id_category": "65b509f6e5e032d1d0f507b3"
+},
+{
+  "_id": {
+    "$oid": "6924a2faa98f69c480924bae"
+  },
+  "name": "Cà Phê Sữa Đá",
+  "price": 30000,
+  "description": "Cà phê Robusta đậm đà pha sữa đặc.",
+  "id_category": "65b509f6e5e032d1d0f507b3"
+},
+{
+  "_id": {
+    "$oid": "6924a2faa98f69c480924baf"
+  },
+  "name": "Nước Ép Dứa",
+  "price": 35000,
+  "description": "Nước ép nguyên chất từ dứa tươi.",
+  "id_category": "65b509f6e5e032d1d0f507b3"
+},
+{
+  "_id": {
+    "$oid": "6924a2faa98f69c480924bb0"
+  },
+  "name": "Lẩu Thái Tom Yum",
+  "price": 280000,
+  "description": "Lẩu chua cay chuẩn vị Thái, ăn kèm hải sản tươi.",
+  "id_category": "65b509f6e5e032d1d0f507b4"
+},
+{
+  "_id": {
+    "$oid": "6924a2faa98f69c480924bb1"
+  },
+  "name": "Lẩu Gà Lá É",
+  "price": 250000,
+  "description": "Vị lá é đặc trưng, gà ta mềm ngọt.",
+  "id_category": "65b509f6e5e032d1d0f507b4"
+},
+{
+  "_id": {
+    "$oid": "6924a2faa98f69c480924bb2"
+  },
+  "name": "Chè Ba Màu",
+  "price": 25000,
+  "description": "Các loại đậu, thạch, cốt dừa, mát lạnh.",
+  "id_category": "65b509f6e5e032d1d0f507b5"
+},
+{
+  "_id": {
+    "$oid": "6924a2faa98f69c480924bb3"
+  },
+  "name": "Bánh Flan Caramel",
+  "price": 20000,
+  "description": "Bánh flan mềm mịn, sốt caramel đắng nhẹ.",
+  "id_category": "65b509f6e5e032d1d0f507b5"
+},
+{
+  "_id": {
+    "$oid": "6924a2faa98f69c480924bb4"
+  },
+  "name": "Tôm Hấp Nước Dừa",
+  "price": 180000,
+  "description": "Tôm sú tươi hấp với nước dừa xiêm ngọt thanh.",
+  "id_category": "65b509f6e5e032d1d0f507b6"
+},
+{
+  "_id": {
+    "$oid": "6924a2faa98f69c480924bb5"
+  },
+  "name": "Cua Rang Me",
+  "price": 350000,
+  "description": "Cua tươi chắc thịt rang với sốt me chua ngọt.",
+  "id_category": "65b509f6e5e032d1d0f507b6"
+},
+{
+  "_id": {
+    "$oid": "6924a2faa98f69c480924bb6"
+  },
+  "name": "Phở Chay",
+  "price": 40000,
+  "description": "Nước dùng rau củ ngọt tự nhiên, nấm và tàu hũ.",
+  "id_category": "65b509f6e5e032d1d0f507b7"
+},
+{
+  "_id": {
+    "$oid": "6924a2faa98f69c480924bb7"
+  },
+  "name": "Cơm Chiên Rau Củ",
+  "price": 45000,
+  "description": "Cơm chiên với cà rốt, đậu que, bắp và nấm.",
+  "id_category": "65b509f6e5e032d1d0f507b7"
+},
+{
+  "_id": {
+    "$oid": "6924a2faa98f69c480924bb8"
+  },
+  "name": "Mì Ý Carbonara",
+  "price": 95000,
+  "description": "Mì Ý sốt kem trứng béo ngậy, thịt xông khói.",
+  "id_category": "65b509f6e5e032d1d0f507b8"
+},
+{
+  "_id": {
+    "$oid": "6924be6a4b27dd6ef30dbd06"
+  },
+  "name": "Bánh canh",
+  "price": 25,
+  "description": "Món này làm từ gạo",
+  "id_category": {
+    "$oid": "65b509f6e5e032d1d0f507b1"
+  },
+  "averageRating": 0,
+  "ratingCount": 0,
+  "dateCreated": {
+    "$date": "2025-11-24T20:22:02.688Z"
+  },
+  "__v": 0
+}]

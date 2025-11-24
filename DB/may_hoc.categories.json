@@ -1,0 +1,50 @@
+[{
+  "_id": "65b509f6e5e032d1d0f507b1",
+  "name": "Món Chính Việt Nam"
+},
+{
+  "_id": "65b509f6e5e032d1d0f507b2",
+  "name": "Món Khai Vị"
+},
+{
+  "_id": "65b509f6e5e032d1d0f507b3",
+  "name": "Đồ Uống Giải Khát"
+},
+{
+  "_id": "65b509f6e5e032d1d0f507b4",
+  "name": "Món Lẩu"
+},
+{
+  "_id": "65b509f6e5e032d1d0f507b5",
+  "name": "Tráng Miệng"
+},
+{
+  "_id": "65b509f6e5e032d1d0f507b6",
+  "name": "Món Hải Sản"
+},
+{
+  "_id": "65b509f6e5e032d1d0f507b7",
+  "name": "Món Chay"
+},
+{
+  "_id": "65b509f6e5e032d1d0f507b8",
+  "name": "Món Âu"
+},
+{
+  "_id": "65b509f6e5e032d1d0f507b9",
+  "name": "Cơm Văn Phòng"
+},
+{
+  "_id": "65b509f6e5e032d1d0f507ba",
+  "name": "Món Ăn Nhanh"
+},
+{
+  "_id": {
+    "$oid": "6924bc8c4b27dd6ef30dbcdb"
+  },
+  "name": "Ăn nhanh",
+  "dateCreated": {
+    "$date": "2025-11-24T20:14:04.877Z"
+  },
+  "__v": 0
+}]

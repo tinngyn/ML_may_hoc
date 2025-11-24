@@ -1,0 +1,76 @@
+[{
+  "_id": {
+    "$oid": "6924b8a61471cce3254d20f5"
+  },
+  "name": "Bảo",
+  "phone": "0934858724",
+  "score": 4,
+  "comment": "món ăn cũng tạm ổn",
+  "dish": {
+    "$oid": "6924a2faa98f69c480924ba6"
+  },
+  "createdAt": {
+    "$date": "2025-11-24T19:57:26.155Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-24T19:57:26.155Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6924b9051471cce3254d2100"
+  },
+  "name": "Bao",
+  "phone": "0934858725",
+  "score": 5,
+  "comment": "ngon",
+  "dish": {
+    "$oid": "6924a2faa98f69c480924ba6"
+  },
+  "createdAt": {
+    "$date": "2025-11-24T19:59:01.428Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-24T19:59:01.428Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6924b92d1471cce3254d2105"
+  },
+  "name": "123",
+  "phone": "0934858722",
+  "score": 5,
+  "comment": "123",
+  "dish": {
+    "$oid": "6924a2faa98f69c480924ba6"
+  },
+  "createdAt": {
+    "$date": "2025-11-24T19:59:41.546Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-24T19:59:41.546Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6924b9fe1471cce3254d210a"
+  },
+  "name": "huy",
+  "phone": "0934858712",
+  "score": 4,
+  "comment": "món này bình thường",
+  "dish": {
+    "$oid": "6924a2faa98f69c480924ba6"
+  },
+  "createdAt": {
+    "$date": "2025-11-24T20:03:10.247Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-24T20:03:10.247Z"
+  },
+  "__v": 0
+}]
