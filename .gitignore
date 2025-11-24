@@ -1,0 +1,24 @@
+# 1. Thư mục phụ thuộc (Dependencies)
+# Loại trừ node_modules trong thư mục gốc và tất cả các thư mục con
+node_modules
+
+# Loại trừ các file cache và lock của NPM/Yarn
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnp
+.pnp.js
+
+# 2. Thư mục Build và tạm thời (Build and Temp)
+# Thư mục build/dist của dự án React (web)
+web/build
+web/dist
+
+# Thư mục build/dist của dự án Server
+server/build
+server/dist
+
+# Các tệp cache của IDE/Editor
+.vscode
+.idea
+.DS_Store

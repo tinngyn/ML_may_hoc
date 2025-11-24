@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.app-container {
+   background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat;
+  min-height: 40vh; 
+  width: 100%;
+  position: relative;
+  background-image: url('./assets/bg3.jpeg');
+}
+.app-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6); /* Màu đen với độ mờ 60% */
+  /* backdrop-filter: blur(2px); (Tùy chọn: thêm hiệu ứng làm mờ ảnh nền) */
+  z-index: 1; /* Đặt lớp phủ dưới chữ */
+}
+.app-container .content-wrapper {
+  position: relative;
+  z-index: 2; /* Đặt chữ lên trên lớp phủ */
+  /* Đảm bảo nội dung chiếm đủ chiều cao để căn giữa */
+  min-height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
