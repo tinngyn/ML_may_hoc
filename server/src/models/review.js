@@ -29,6 +29,11 @@ const ReviewSchema = new mongoose.Schema(
       type: mongoose.Schema.Types.ObjectId,
       ref: 'Dish',
       required: [true, 'Thiếu id món ăn']
+    },
+    // ✅ Kết quả phân tích cảm xúc từ AI
+    ai_sentiment: {
+      type: String,
+      default: 'Chưa phân tích'
     }
   },
   {

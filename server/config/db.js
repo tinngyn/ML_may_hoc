@@ -1,7 +1,7 @@
 
 const mongoose = require('mongoose');
 
-const MONGODB_URI = 'mongodb://localhost:27017/may_hoc'; 
+const MONGODB_URI = 'mongodb://localhost:27017/nhahang'; 
 
 const connectDB = async () => {
   try {

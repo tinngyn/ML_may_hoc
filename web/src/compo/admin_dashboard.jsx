@@ -27,6 +27,8 @@ function AdminDashboard({ onClose }) {
   });
   const [reviews, setReviews] = useState([]);
   const [reviewFilter, setReviewFilter] = useState("");
+  const [starFilter, setStarFilter] = useState("all");          // ⭐ lọc theo sao
+  const [sentimentFilter, setSentimentFilter] = useState("all"); // 🤖 lọc theo AI
   const [message, setMessage] = useState("");
   const [error, setError] = useState("");
   const [activeTab, setActiveTab] = useState("categories");
@@ -52,7 +54,9 @@ function AdminDashboard({ onClose }) {
       const [catRes, dishRes, reviewRes] = await Promise.all([
         fetch(`${apiBase}/categories`).then((r) => r.json()),
         fetch(`${apiBase}/dishes`).then((r) => r.json()),
-        token ? authedFetch(`${apiBase}/reviews`).catch(() => []) : Promise.resolve([]),
+        token
+          ? authedFetch(`${apiBase}/reviews`).catch(() => [])
+          : Promise.resolve([]),
       ]);
       setCategories(Array.isArray(catRes) ? catRes : []);
       setDishes(Array.isArray(dishRes) ? dishRes : []);
@@ -64,6 +68,7 @@ function AdminDashboard({ onClose }) {
 
   useEffect(() => {
     loadData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [token]);
 
   const handleLogin = async (e) => {
@@ -208,9 +213,29 @@ function AdminDashboard({ onClose }) {
     }
   };
 
-  const filteredReviews = reviewFilter
-    ? reviews.filter((r) => r.dish?._id === reviewFilter || r.dish === reviewFilter)
-    : reviews;
+  // 🔍 Lọc danh sách đánh giá theo: món, sao, cảm xúc AI
+  let filteredReviews = reviews;
+
+  // Lọc theo món
+  if (reviewFilter) {
+    filteredReviews = filteredReviews.filter(
+      (r) => r.dish?._id === reviewFilter || r.dish === reviewFilter
+    );
+  }
+
+  // Lọc theo số sao
+  if (starFilter !== "all") {
+    filteredReviews = filteredReviews.filter(
+      (r) => Number(r.score) === Number(starFilter)
+    );
+  }
+
+  // Lọc theo cảm xúc AI
+  if (sentimentFilter !== "all") {
+    filteredReviews = filteredReviews.filter(
+      (r) => (r.ai_sentiment || "").trim() === sentimentFilter
+    );
+  }
 
   const getCategoryName = (dish) => {
     if (dish.id_category?.name) return dish.id_category.name;
@@ -375,13 +400,19 @@ function AdminDashboard({ onClose }) {
                       placeholder="Mô tả"
                       value={dishForm.description}
                       onChange={(e) =>
-                        setDishForm((p) => ({ ...p, description: e.target.value }))
+                        setDishForm((p) => ({
+                          ...p,
+                          description: e.target.value,
+                        }))
                       }
                     />
                     <select
                       value={dishForm.id_category}
                       onChange={(e) =>
-                        setDishForm((p) => ({ ...p, id_category: e.target.value }))
+                        setDishForm((p) => ({
+                          ...p,
+                          id_category: e.target.value,
+                        }))
                       }
                     >
                       <option value="">-- Chọn danh mục --</option>
@@ -414,9 +445,7 @@ function AdminDashboard({ onClose }) {
                       <div key={d._id} className="admin-table__row">
                         <span>{d.name}</span>
                         <span>{getCategoryName(d)}</span>
-                        <span>
-                          {d.price?.toLocaleString("vi-VN")}
-                        </span>
+                        <span>{d.price?.toLocaleString("vi-VN")}</span>
                         <div className="admin-actions">
                           <button onClick={() => editDish(d._id)}>Sửa</button>
                           <button onClick={() => deleteDish(d._id)}>Xóa</button>
@@ -438,31 +467,77 @@ function AdminDashboard({ onClose }) {
                     <p className="menu-kicker">Đánh giá</p>
                     <h3>Danh sách đánh giá</h3>
                   </div>
-                  <select
-                    value={reviewFilter}
-                    onChange={(e) => setReviewFilter(e.target.value)}
-                  >
-                    <option value="">Tất cả món</option>
-                    {dishes.map((d) => (
-                      <option key={d._id} value={d._id}>
-                        {d.name}
+
+                  <div className="admin-inline" style={{ gap: "8px" }}>
+                    {/* Lọc theo món */}
+                    <select
+                      value={reviewFilter}
+                      onChange={(e) => setReviewFilter(e.target.value)}
+                    >
+                      <option value="">Tất cả món</option>
+                      {dishes.map((d) => (
+                        <option key={d._id} value={d._id}>
+                          {d.name}
+                        </option>
+                      ))}
+                    </select>
+
+                    {/* Lọc theo số sao */}
+                    <select
+                      value={starFilter}
+                      onChange={(e) => setStarFilter(e.target.value)}
+                    >
+                      <option value="all">Tất cả sao</option>
+                      <option value="5">5 sao</option>
+                      <option value="4">4 sao</option>
+                      <option value="3">3 sao</option>
+                      <option value="2">2 sao</option>
+                      <option value="1">1 sao</option>
+                    </select>
+
+                    {/* Lọc theo cảm xúc AI */}
+                    <select
+                      value={sentimentFilter}
+                      onChange={(e) => setSentimentFilter(e.target.value)}
+                    >
+                      <option value="all">Tất cả cảm xúc</option>
+                      <option value="Tích (tích cực mạnh)">
+                        Tích cực mạnh
                       </option>
-                    ))}
-                  </select>
+                      <option value="Không tiêu (không xấu)">
+                        Không tiêu
+                      </option>
+                      <option value="Không tích (không tốt)">
+                        Không tích
+                      </option>
+                      <option value="Tiêu (tiêu cực mạnh)">
+                        Tiêu cực mạnh
+                      </option>
+                      <option value="AI lỗi">AI lỗi</option>
+                    </select>
+                  </div>
                 </header>
+
                 <div className="admin-review-list">
                   {filteredReviews.map((r) => (
                     <div key={r._id} className="admin-review-item">
                       <div className="admin-review-head">
                         <div>
-                          <strong>{r.name}</strong> ({r.phone}) - Điểm: {r.score}
+                          <strong>{r.name}</strong> ({r.phone}){" "}
+                          <span> - ⭐ {r.score}</span>
+                          <div>
+                            🤖{" "}
+                            <em>{r.ai_sentiment || "Chưa có kết quả AI"}</em>
+                          </div>
                         </div>
                         <span className="admin-pill">
                           {r.dish?.name || "Món"}
                         </span>
                       </div>
                       <p>{r.comment}</p>
-                      <small>{new Date(r.createdAt).toLocaleString()}</small>
+                      <small>
+                        {new Date(r.createdAt).toLocaleString("vi-VN")}
+                      </small>
                     </div>
                   ))}
                   {!filteredReviews.length && (

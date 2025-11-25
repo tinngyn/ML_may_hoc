@@ -6,7 +6,7 @@ function Header({ onAdminClick, isAdmin }) {
   return (
     <header className="app-header d-flex justify-content-between align-items-center">
       <div className="logo">
-        QUÁN NHẬU <span>4.0</span>
+        HỆ THỐNG NHÀ HÀNG  <span>AI</span>
       </div>
       <button className="btn-login-trigger" onClick={onAdminClick}>
         {isAdmin ? "Quay lại menu" : "Admin"}

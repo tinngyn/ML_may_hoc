@@ -5,13 +5,12 @@ const categoryRoutes = require('./category_route');
 const dishRoutes = require('./dish_route');         
 const reviewRoutes = require('./review_route');
 const adminRoutes = require('./admin_route');
+const aiRoutes = require('./ai_route'); // 👈 thêm
 
 router.use('/categories', categoryRoutes);
-
 router.use('/dishes', dishRoutes);
-
 router.use('/reviews', reviewRoutes);
-
 router.use('/admin', adminRoutes);
+router.use('/ai', aiRoutes); // 👈 thêm
 
 module.exports = router;
